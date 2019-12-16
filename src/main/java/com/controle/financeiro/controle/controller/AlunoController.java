@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.controle.financeiro.controle.models.Aluno;
+import com.controle.financeiro.controle.models.ValidacaoLogin;
 import com.controle.financeiro.controle.service.AlunoService;
 
 @RestController
@@ -19,6 +20,11 @@ public class AlunoController {
 
 	@Autowired
 	AlunoService alunoService;
+	
+	@GetMapping("/oi")
+	public ValidacaoLogin oi() {
+		return new ValidacaoLogin("Funcionou");
+	}
 	
 	@GetMapping
 	public Aluno getAlunoById(@PathVariable Long id) {
