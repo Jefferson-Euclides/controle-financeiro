@@ -33,7 +33,7 @@ public class AlunoController {
 	
 	@DeleteMapping
 	public void deleteAlunoById(@PathVariable Long id) {
-		alunoService.deleteAlunoById(id);;
+		alunoService.deleteAlunoById(id);
 	}
 	
 	@PutMapping
